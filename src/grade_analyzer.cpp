@@ -12,9 +12,13 @@ double calculateTotal(double score1, double score2, double score3) {
 // Returns 0.0 if count is invalid (less than or equal to 0)
 double calculateAverage(double total, int count) {
     if(count <= 0)
+    {
         return 0.0;
-
-    return total / count;
+    }
+    else
+    {
+        return (total / count);
+    }
 }
 
 // Returns 'A' for averages 90 or higher.
@@ -23,22 +27,37 @@ double calculateAverage(double total, int count) {
 // Returns 'D' for averages 60 or higher.
 // Returns 'F' otherwise.
 char determineLetterGrade(double average) {
-    if(average >= 90) return 'A';
-    if(average >= 80) return 'B';
-    if(average >= 70) return 'C';
-    if(average >= 60) return 'D';
-
-    return 'F';
+    if(average >= 90)
+    {  
+        return 'A';
+    } 
+    else if(average >= 80)
+    {
+        return 'B';
+    }
+    else if(average >= 70)
+    {
+        return 'C';
+    } 
+    else if(average >= 60)
+    {
+        return 'D';
+    } 
+    else
+    {
+        return 'F';
+    }
+    
 }
 
 // Returns true when an average is passing (70 or higher)
 bool isPassing(double average) {
-    return average >= 70;
+    return (average >= 70);
 }
 
 // Returns true when a score is valid (between 0 and 100, inclusive)
 bool isValidScore(double score) {
-    return score >= 0 && score <= 100;
+    return ((score >= 0) && (score <= 100));
 }
 
 // Prompts the user for a score until a valid score is entered
